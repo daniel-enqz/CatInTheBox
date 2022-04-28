@@ -4,17 +4,27 @@
 </p>
 
 ## Points to consider 🐱
-> ✅ The cat will move every day we open a box, if we start from box 1, and check that box n times, the cat will move n times.<br>
+> ✅ The cat will move every day we open a box.<br>
 > ✅ The cat will always move to 1 adjacent box. <br>
-
+> ✅ There are some patters we may consider: <br>
+> 1. If the cat is at the first or last box, the only option for the cat will be moving either left if it is at the last box, or right if it is at the beginning. <br>
+> **_Example Endpoint Case:_** Let´s say the cat is hidden at box 5, and we are checking box 4, after that the cat will only have the option to move back to box 4, so if we check box 4 again, we will catch the cat. The interesting thing is that this will apply for any boxes length.
+> We can simulate this, with the next algorithm.
+```ruby
+def cat_moving_simulation(correct_box, boxes_array)
+  return 1 if correct_box == 1
+  return -1 if correct_box == boxes_array.last
+  random_movement = rand(0..1)
+  return random_movement == 0 ? 1 : -1
+end
+```
+> 2. As the array is sorted, we can consider that the cat will always move from an _even_ number to an _odd_ one, or vice versa. <br>
+> **_Example Case:_** If the cat is at box 3, it will always move to an even number, either 2 or 4. 
 
 ## Proposal :octocat:
-> Create an algorithm that iterates n times over the first index. (n being the length of our array.) <br>
-> Example: If we have an array of 5 elements/boxes we will check over the first box for 5 days, generating 5 movements on the cat.
-> Then, we will continue iterating over the next index but only n - 1 times, the next index we will iterate n - 2, and so on.
+> Create an algorithm that iterates over each element except from the first and the last element, 
 
-# Time complexity:
-> ## `n(n+1)/2` = O(n)
+# Time complexity: O(n^2), Lower Bound being Ω(1)
 
 ## 🧦 **_Insights:_** 
 1. Is it really fast?

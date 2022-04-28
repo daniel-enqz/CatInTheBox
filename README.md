@@ -27,3 +27,34 @@
 <p align="center">
   <img src="assets/complexity.png" />
 </p>
+
+## 🧦 **_Code_** 
+```ruby
+def cat_moving_simulation(correct_box, boxes_array)
+  return 1 if correct_box == 1
+  return -1 if correct_box == boxes_array.last
+  random_movement = rand(0..1)
+  return random_movement == 0 ? 1 : -1
+end
+```
+> This is a simulator we used to test our code, so that evrey time we check a box, this function will be called and the cat will move, a good thing to specify is that we will always move the cat 1 box to the right if is at box 1, because the cat can't go to any other place. A similar situation happens with the last box, that's why we use this 2 lines.
+```ruby
+return 1 if correct_box == 1
+return -1 if correct_box == boxes_array.last
+```
+<hr>
+```ruby
+def searching_minino(boxes_array, correct_box)
+  days = 1
+  boxes_array.each_with_index do |box, index|
+    tries_per_box = boxes_array.length - index
+    while tries_per_box != 0
+      return [days, box] if box == correct_box
+      tries_per_box -= 1
+      days += 1
+      correct_box += cat_moving_simulation(correct_box, boxes_array)
+    end
+  end
+end
+```
+> This is our main function, and there are a few things to highlight, the function receives our array, and the initial position of the cat which will suddenly be changed. We also specify a days counter to check how many days we spent to get the final solution. The function will check over each index/box in our array, until it finds that the box checked macthes wit the correct position of the cat.

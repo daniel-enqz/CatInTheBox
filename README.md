@@ -28,6 +28,8 @@
   <img src="assets/complexity.png" />
 </p>
 
+# ✅ **"We can tel that the maximum amount of days needed for 5 boxes will be 14"** <br>
+
 ## 🧦 **_Code_** 
 ```ruby
 def cat_moving_simulation(correct_box, boxes_array)

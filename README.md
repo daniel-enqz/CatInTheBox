@@ -67,5 +67,4 @@ git clone git@github.com:daniel-enqz/CatInTheBox.git
 cd CatInTheBox
 ruby main.rb
 ```
-
-
+> ✅ **"Feel free to change this lines, and chenge the length of the array and the initial position of the cat 🐱"**

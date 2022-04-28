@@ -43,6 +43,7 @@ return 1 if correct_box == 1
 return -1 if correct_box == boxes_array.last
 ```
 <hr>
+
 ```ruby
 def searching_minino(boxes_array, correct_box)
   days = 1
@@ -57,4 +58,14 @@ def searching_minino(boxes_array, correct_box)
   end
 end
 ```
-> This is our main function, and there are a few things to highlight, the function receives our array, and the initial position of the cat which will suddenly be changed. We also specify a days counter to check how many days we spent to get the final solution. The function will check over each index/box in our array, until it finds that the box checked macthes wit the correct position of the cat.
+> This is our main function, and there are a few things to highlight, the function receives our array, and the initial position of the cat which will suddenly be changed. We also specify a days counter to check how many days we spent to get the final solution. The function will check over each index/box in our array, until it finds that the box checked macthes wit the correct position of the cat. <br>
+> ✅ **"Each time we change from box, we are iterating over that box -1 times than the previous one"**
+
+# Try this code in your console!
+```
+git clone git@github.com:daniel-enqz/CatInTheBox.git
+cd CatInTheBox
+ruby main.rb
+```
+
+

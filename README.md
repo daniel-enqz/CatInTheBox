@@ -68,3 +68,7 @@ cd CatInTheBox
 ruby main.rb
 ```
 > ✅ **"Feel free to change this lines, and chenge the length of the array and the initial position of the cat 🐱"**
+```ruby
+boxes_array = (1..5).to_a
+result = searching_minino(boxes_array, 4)
+```

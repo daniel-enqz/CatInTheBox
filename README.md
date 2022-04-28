@@ -22,14 +22,14 @@ end
 > **_Example Case:_** If the cat is at box 3, it will always move to an even number, either 2 or 4. 
 
 ## Proposal :octocat:
-> Considering the previous points, we can create an algorithm that takes care of Endpoints of an array, and always alternates checking from an even number to a odd number(Following **_ODD TO EVEN_** case), the brute force solution of doing this will be to iterate over each number without touching the endpoints (because the cat will always come back from an endpoint). We will suddenly find the cat if we iterate from index 1 all through index n - 1. <br>
+> Considering the previous points, we can create an algorithm that takes care of Endpoints of an array, and always alternates checking from an odd number to an even number(Following **_ODD TO EVEN_** case), the brute force solution of doing this will be to iterate over each number without touching the endpoints (because the cat will always come back from an endpoint). We will suddenly find the cat if we iterate from index 1 all through index n - 1. <br>
 ❗**We may find the cat in the first iteration, if not, we will need to check thorugh the array again, choosing the penultimate index twice (Following the _ENDPOINT CASE_) and iterating backwards.** 
 
-# Time complexity: O(n^2), Lower Bound being Ω(1)
+# Time complexity: O(n^2), Lower Bound being Ω(1), Average Case O(n), 
 
 ## 🧦 **_Insights:_** 
 1. Is it really fast?
-> We can tell that the algorithm is fast, because we only need to iterations over the array to find our index, here is a quick image of different time complexity algorithms and we can indeed see that O(n^2) is quite faster than others.
+> We can tell that the algorithm is fast in most cases. We will need 2 iterations over the array to find our index in the worst case, but there's the probability that we find it in the first iteration, being the average case O(n), here is a quick image of different time complexity algorithms and we can indeed see that O(n^2) is quite faster than others.
 <br>
 
 ✅ **"When writing algorithms, time complexity and memory (space) are in balance"** <br>
@@ -39,9 +39,7 @@ end
   <img src="assets/complexity.png" />
 </p>
 
-# ✅ **"We can tell"** <br>
-
-## 🧦 **_Code_** 
+# ✅ **"We can tell that one of the best apporoaches will be to follow the _ODD TO EVEN_ case, that´s in my opinion the most valuable insight of were the cat might be. and just take advantage of the endpoints, because the cat will ALWAYS move closer to us from an endpoint 💌 "** <br>
 
 # Try this code in your console!
 ```

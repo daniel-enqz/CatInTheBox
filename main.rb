@@ -7,17 +7,22 @@ end
 
 def searching_minino(boxes_array, correct_box)
   days = 1
-  boxes_array.each_with_index do |box, index|
-    tries_per_box = boxes_array.length - index
-    while tries_per_box != 0
-      return [days, box] if box == correct_box
-      tries_per_box -= 1
-      days += 1
-      correct_box += cat_moving_simulation(correct_box, boxes_array)
+  direction = 1
+  i = 1
+
+  while boxes_array[i] != correct_box
+    if days == boxes_array.length - 2
+      i += 1
+      direction = -1
     end
+
+    i += direction
+    days += 1
+    correct_box += cat_moving_simulation(correct_box, boxes_array)
   end
+  return [days, boxes_array[i]]
 end
 
 boxes_array = (1..5).to_a
-result = searching_minino(boxes_array, 4)
+result = searching_minino(boxes_array, 5)
 puts "GREAT, we needed #{result[0]} days, to find the CAT in BOX #{result[1]}"

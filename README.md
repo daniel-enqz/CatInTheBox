@@ -50,5 +50,6 @@ ruby main.rb
 > ✅ **"Feel free to change this lines, and chenge the length of the array and the initial position of the cat 🐱"**
 ```ruby
 boxes_array = (1..5).to_a
-result = searching_minino(boxes_array, 4)
+correct_box = 5
+result = searching_minino(boxes_array, correct_box)
 ```

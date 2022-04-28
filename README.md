@@ -8,7 +8,7 @@
 > ✅ The cat will always move to 1 adjacent box. <br>
 > ✅ There are some patters we may consider: <br>
 > 1. **ENDPOINT**: If the cat is at the first or last box, the only option for the cat will be moving either left if it is at the last box, or right if it is at the beginning. <br>
-> **_Example Case:_** Let´s say the cat is hidden at box 5, and we are checking box 4, after that the cat will only have the option to move back to box 4, so if we check box 4 again, we will catch the cat. The interesting thing is that this will apply for any boxes length.
+> **_Example Case:_** Let´s say the cat is hidden at box 5, and we are checking box 4, after that the cat will only have the option to move back to box 4, so if we check box 4 again, we will catch the cat. The interesting thing is that this will apply for any boxes length. <br>
 > We can simulate this, with the next algorithm.
 ```ruby
 def cat_moving_simulation(correct_box, boxes_array)

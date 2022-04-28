@@ -39,7 +39,7 @@ end
   <img src="assets/complexity.png" />
 </p>
 
-# ✅ **"We can tell that one of the best apporoaches will be to follow the _ODD TO EVEN_ case, that´s in my opinion the most valuable insight of were the cat might be. and just take advantage of the endpoints, because the cat will ALWAYS move closer to us from an endpoint 💌 "** <br>
+# ✅ **"We can tell that one of the best apporoaches will be to follow the _ODD TO EVEN_ case, that´s in my opinion the most valuable insight of were the cat🐱 might be. and just take advantage of the endpoints, because the cat will ALWAYS move closer to us from an endpoint 💌 "** <br>
 
 # Try this code in your console!
 ```

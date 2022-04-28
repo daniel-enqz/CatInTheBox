@@ -24,7 +24,6 @@ end
 ## Proposal :octocat:
 > Considering the previous points, we can create an algorithm that takes care of Endpoints of an array, and always alternates checking from an odd number to an even number(Following **_ODD TO EVEN_** case), the brute force solution of doing this will be to iterate over each number without touching the endpoints (because the cat will always come back from an endpoint). We will suddenly find the cat if we iterate from index 1 all through index n-1. <br>
 ❗ **We may find the cat in the first iteration, if not, we will need to check thorugh the array again, choosing the penultimate index twice (Following the _ENDPOINT CASE_) and iterating backwards.** <br>
-❓ **_But why iterating backwards?_** Well if we get to the point where after iterating over the penultimate index twice we didn't find our cat, we can guess that the cat is not in the last 2 index of our array.
 
 # Time complexity: O(n^2), Lower Bound being Ω(1), Average Case O(n), 
 

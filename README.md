@@ -19,3 +19,9 @@
 ## 🧦 **_Insights:_** 
 1. Is it really fast?
 > We can tell that the algorithm is fast, because as we are genrating movements on the cat each day we check, we are somehow increasing the probability that the cat passes through a box we are checking, here is a quick image of different time complexity algorithms and we can indeed see that O(n) is quite faster than others.
+✅ **"When writing algorithms, time complexity and memory (space) are in balance"** <br>
+✅ **"We use asymptotic notation to exclude less important cases, and ust focuses on running time"**
+
+<p align="center">
+  <img src="assets/complexity.png" />
+</p>

@@ -24,5 +24,6 @@ def searching_minino(boxes_array, correct_box)
 end
 
 boxes_array = (1..5).to_a
-result = searching_minino(boxes_array, 5)
+correct_box = 5
+result = searching_minino(boxes_array, correct_box)
 puts "GREAT, we needed #{result[0]} days, to find the CAT in BOX #{result[1]}"
